@@ -13,6 +13,8 @@ RUN echo "SECRET_KEY=_c%+g)97ku(u!4v#w7$9o%$-g6j1#!bv*w#s8ezg4!&3l=m5sn" > .env
 
 RUN python manage.py migrate
 
+RUN python manage.py collectstatic
+
 EXPOSE 8000
 
 CMD ["gunicorn", "project_blog.wsgi", "--bind", "0.0.0.0:8000"]
