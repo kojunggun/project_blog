@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .container{
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .container div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+    }
+    .container img{
+        width: 7rem;
+        height: 7rem;
+        object-fit: cover;
+        border-radius: 3rem;
+    }
+</style>
+        <div class="container">
+            {% for project in target_project %}
+                <a href="{% url 'projectapp:detail' pk=project.pk %}" style="object-fit: cover;">
+                    {% include 'snippets/card_project.html' with project=project%}
+                </a>
+            {% endfor %}
+        </div>
+        <script src="{% static 'js/magicgrid.js' %}"></script>
+
+        {% include 'snippets/pagination.html' with page_obj=page_obj %}
+{% endblock %}

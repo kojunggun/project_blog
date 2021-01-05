@@ -1,0 +1,35 @@
+.header_div{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.footer_button{
+    font-size: .8rem;
+}
+
+.footer_div{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width:500px){
+    html {
+        font-size: 13px;
+    }
+}
+
+a {
+    color: black;
+}
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.ko_header_nav{
+    margin: 0 1rem
+}
+
+.ko_header_navbar{
+    margin: 3rem 0;
+}
